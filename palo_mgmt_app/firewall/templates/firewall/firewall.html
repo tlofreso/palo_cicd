@@ -11,7 +11,30 @@
             {{ firewallrequest_form|crispy }}
         </fieldset>
         <fieldset class="form-group">
-            {{ firewallrule_form.as_table }}
+            <table class="table-responsive table-sm">
+                <thead>
+                    <tr>
+                        <th>Source IP</th>
+                        <th>Source Host</th>
+                        <th>Source Port</th>
+                        <th>Destination IP</th>
+                        <th>Destination Host</th>
+                        <th>Destination Port</th>
+                        <th>Protocol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th>{{ firewallrule_form.source_ip }}</th>
+                    <th>{{ firewallrule_form.source_host }}</th>
+                    <th>{{ firewallrule_form.source_port }}</th>
+                    <th>{{ firewallrule_form.destination_ip }}</th>
+                    <th>{{ firewallrule_form.destination_host }}</th>
+                    <th>{{ firewallrule_form.destination_port }}</th>
+                    <th>{{ firewallrule_form.protocol }}</th>
+                </tr>
+                </tbody>
+            </table>
         </fieldset>
         <div class="form-group">
             <button class="btn btn-outline-info" type="submit">Submit Request</button>

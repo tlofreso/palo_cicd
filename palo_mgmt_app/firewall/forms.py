@@ -13,3 +13,5 @@ class FirewallRuleForm(ModelForm):
         model = FirewallRule
         fields = "__all__"
 
+
+# FirewallRuleFormSet = inlineformset_factory(FirewallRequest, FirewallRule, form = FirewallRuleForm, fields=['source_ip','source_host'])

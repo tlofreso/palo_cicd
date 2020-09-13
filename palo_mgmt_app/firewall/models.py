@@ -17,7 +17,7 @@ class FirewallRequest(models.Model):
 
 # Defines the rules (IP/Port/Protocol) for the firewall request
 class FirewallRule(models.Model):
-    record = models.ForeignKey("FirewallRequest", on_delete=models.CASCADE)
+    firewallrequest = models.ForeignKey("FirewallRequest", on_delete=models.CASCADE)
     source_ip = models.GenericIPAddressField()
     source_host = models.CharField(max_length=30)
     source_port = models.PositiveIntegerField(
