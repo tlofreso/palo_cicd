@@ -6,7 +6,7 @@ PROTOCOL_CHOICES = [("ICMP", "ICMP"), ("TCP", "TCP"), ("UDP", "UDP")]
 
 # Defines the structure of a new firewall request
 class FirewallRequest(models.Model):
-    request_id = models.CharField(max_length=20)
+    request_id = models.CharField(max_length=20, primary_key=True)
     requestor = models.CharField(max_length=50)
     department = models.CharField(max_length=50)
     request_date = models.DateField(auto_now=True)
